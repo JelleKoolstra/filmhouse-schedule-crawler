@@ -1,6 +1,5 @@
 # Ignore private config and caches
 config.py
-config_private.py
 __pycache__/
 *.py[cod]
 
@@ -8,6 +7,10 @@ __pycache__/
 movies_schedule.html
 *.log
 .env
+
+# VS Code
+.vscode/
+*.code-workspace
 
 # Ignore archive (old monolithic scripts)
 archive/
