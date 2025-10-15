@@ -1,7 +1,6 @@
-# main.py
-from scraper import get_movies_for_week_by_dropdown, FILMHOUSE_URLS
-from html_generator import generate_overview_table
-from telegram_bot import send_document
+from .scraper import get_movies_for_week_by_dropdown, FILMHOUSE_URLS
+from .html_generator import generate_overview_table
+from .telegram_bot import send_document
 
 def main():
     all_week_movies = {}

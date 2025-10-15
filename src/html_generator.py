@@ -1,14 +1,6 @@
-# html_generator.py
 import pandas as pd
 
 def generate_overview_table(all_week_movies):
-    """
-    Build a styled HTML overview table from the scraped data.
-    The table has columns: Day, Title, Times (with clickable hyperlinks).
-    Rows are sorted by day (in the order they appear in the data) and filmhouse order.
-    Background colors are set based on filmhouse.
-    Returns the HTML string.
-    """
     # Flatten the nested data into a list of rows.
     rows = []
     for filmhouse, week_data in all_week_movies.items():

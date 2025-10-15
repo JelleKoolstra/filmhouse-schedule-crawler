@@ -1,4 +1,3 @@
-# scraper.py
 import time
 from bs4 import BeautifulSoup
 from urllib.parse import urlparse, urljoin
@@ -19,14 +18,6 @@ FILMHOUSE_URLS = [
 ]
 
 def parse_movies(html, base_site):
-    """
-    Parse the HTML to extract movie titles and playing times with complete ticket links.
-    Each movie will have:
-      - 'title': the movie title,
-      - 'playings': a list of dictionaries with:
-            'time': playing time (text),
-            'ticket_link': full URL to the ticket page.
-    """
     soup = BeautifulSoup(html, 'html.parser')
     movies = []
     movie_tiles = soup.find_all(class_='tile__title')
@@ -57,11 +48,6 @@ def parse_movies(html, base_site):
     return movies
 
 def get_movies_for_week_by_dropdown(base_url):
-    """
-    Load the theater agenda once and use the date dropdown to collect movies for the week.
-    Only processes options from the date filter and skips unwanted ones.
-    Limits to the first 7 days.
-    """
     options = Options()
     options.headless = True  # Set to False during testing if you want to see browser actions.
     # Use webdriver-manager to automatically download and manage the ChromeDriver

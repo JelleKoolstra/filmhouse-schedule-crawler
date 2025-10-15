@@ -1,7 +1,7 @@
-# telegram_bot.py
 import asyncio
 import telegram
-from config import BOT_TOKEN, CHAT_IDS
+
+from .config import BOT_TOKEN, CHAT_IDS
 
 async def send_document_file(html_file):
     bot = telegram.Bot(token=BOT_TOKEN)
