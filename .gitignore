@@ -1,0 +1,13 @@
+# Ignore private config and caches
+config.py
+config_private.py
+__pycache__/
+*.py[cod]
+
+# Ignore generated output and local artifacts
+movies_schedule.html
+*.log
+.env
+
+# Ignore archive (old monolithic scripts)
+archive/
