@@ -1,7 +1,7 @@
 # config_template.py
-# Copy this file to `config.py` and fill in your real secrets.
+# Copy this file to `src/config.py` and fill in your real secrets.
 
-# Your Telegram bot token (keep secret!)
+# Your Telegram bot token
 BOT_TOKEN = "your-bot-token-here"
 
 # Chat ids to send the document to. Example: ["123456789", "987654321"]
